@@ -1,2 +1,3 @@
 # INTERNSHIP-TASKS
 Internship-tasks 
+This repository contains three internship tasks showcasing proficiency in Python and Tkinter. The projects include a Random Password Generator,Rock paper and scissors game, a Number Guessing Game, and a GUI-based Calculator , each demonstrating logic-building, GUI development, and problem-solving skills. The Password Generator creates secure, random passwords with a copy-to-clipboard feature, the Number Guessing Game provides an interactive console-based challenge with hints, and the calculator is used for two number calculations . These projects highlight a strong foundation in Python programming and user-friendly application design. Submitted for internship by Ragani Ajay Jha.
