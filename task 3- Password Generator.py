@@ -16,12 +16,14 @@ def generate_password():
         
 def copy_to_clipboard():
     password = label_output.cget("text").replace("Generated Password: ", "")
-    if password:
+    if password.strip():  
         w.clipboard_clear()
         w.clipboard_append(password)
-        w.update()
+        w.update() 
         messagebox.showinfo("Copied!", "Password copied to clipboard!")
-        
+    else:
+        messagebox.showwarning("No Password", "Please generate a password first!")
+
 #GUI
 w=tk.Tk()
 w.minsize(500,300)
@@ -30,7 +32,7 @@ tk.Label(w,text='PASSWORD GENERATOR',fg='blue',bd=5,bg='pink').grid(row=0,column
 tk.Label(w,text='ENTER PASSWORD LENGTH',padx=10,pady=5).grid(row=2,column=0)
 e=tk.Entry(w)
 e.grid(row=2,column=1)
-tk.Button(w,text='COPY TO CLIPBOARD',fg='blue',command=copy_to_clipboard).grid(row=5,column=1)
+tk.Button(w,text='COPY TO CLIPBOARD',fg='blue',command=copy_to_clipboard).grid(row=6,column=1)
 tk.Button(w,text='Generate Password',fg='red',command=generate_password).grid(row=4,column=1)
 label_output=tk.Label(w,text='')
 label_output.grid(row=5,column=1)
